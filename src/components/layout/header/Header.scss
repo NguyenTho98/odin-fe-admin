@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+
+.ant-layout-header {
+  padding: 0 16px;
+  height: $header-height;
+  line-height: $header-height;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+  box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.18);
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+
+    .header-left-content {
+      .collapse-icon {
+        padding: 5px;
+        cursor: pointer;
+        display: flex;
+        .anticon {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .header-right-content {
+      display: flex;
+      flex: 1;
+      .user-info {
+        display: flex;
+        align-items: center;
+        cursor: default;
+        margin-left: auto;
+        font-weight: 500;
+        .user-name {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

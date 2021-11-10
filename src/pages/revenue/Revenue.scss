@@ -1,0 +1,31 @@
+.revenue-page {
+    display: flex;
+    width: 100%;
+    .revenue-content {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+    }
+  
+    .pagination-table {
+      margin-top: 8px;
+      text-align: right;
+      padding: 0 8px;
+    }
+  }
+  .tab-revenue-detail {
+    .ant-tabs-nav {
+      padding: 0 16px;
+    }
+  }
+  .add-edit-revenue-modal {
+    .add-edit-revenue-content {
+      .upload-revenue-item {
+        .ant-input-group-addon {
+          padding: 0;
+        }
+      }
+    }
+  }
+  

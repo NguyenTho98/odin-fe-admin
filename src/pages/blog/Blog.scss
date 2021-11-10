@@ -1,0 +1,32 @@
+.blog-page {
+  display: flex;
+  width: 100%;
+  .blog-content {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .pagination-table {
+    margin-top: 8px;
+    text-align: right;
+    padding: 0 8px;
+  }
+}
+
+.add-edit-blog-page {
+  .add-edit-content {
+    padding: 0 16px;
+
+    .action-group-btn {
+      .action-btn {
+        min-width: 90px;
+        margin-right: 12px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

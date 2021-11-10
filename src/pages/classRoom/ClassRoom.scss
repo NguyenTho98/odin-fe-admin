@@ -1,0 +1,27 @@
+.classRoom-page {
+    display: flex;
+    width: 100%;
+    .classRoom-content {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+    }
+  
+    .pagination-table {
+      margin-top: 8px;
+      text-align: right;
+      padding: 0 8px;
+    }
+  }
+  
+  .add-edit-classRoom-modal {
+    .add-edit-classRoom-content {
+      .upload-classRoom-item {
+        .ant-input-group-addon {
+          padding: 0;
+        }
+      }
+    }
+  }
+  

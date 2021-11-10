@@ -1,0 +1,27 @@
+.api-page {
+    display: flex;
+    width: 100%;
+    .api-content {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+    }
+  
+    .pagination-table {
+      margin-top: 8px;
+      text-align: right;
+      padding: 0 8px;
+    }
+  }
+  
+  .add-edit-api-modal {
+    .add-edit-api-content {
+      .upload-api-item {
+        .ant-input-group-addon {
+          padding: 0;
+        }
+      }
+    }
+  }
+  

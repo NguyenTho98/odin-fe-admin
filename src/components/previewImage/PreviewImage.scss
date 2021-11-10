@@ -1,0 +1,11 @@
+.preview-img {
+  text-align: left;
+  .btn-view-img {
+    cursor: pointer;
+    color: #01a2a6;
+    white-space: nowrap;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

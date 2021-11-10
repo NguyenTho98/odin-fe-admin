@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+
+.user-page {
+  min-height: $common-page-height;
+  background: transparent;
+  .user-content {
+    padding: 16px;
+    margin-left: 15px;
+  }
+
+  .common-sub-user-page {
+    background: #fff;
+    padding: 8px;
+    height: 100%;
+    .header-section {
+      .header-lb-title {
+        font-weight: 500;
+        padding: 12px 8px;
+        font-size: 16px;
+      }
+      .ant-divider-horizontal {
+        margin-top: 2px;
+      }
+    }
+  }
+}

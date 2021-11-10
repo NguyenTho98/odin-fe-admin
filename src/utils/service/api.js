@@ -1,0 +1,63 @@
+import axios from "axios";
+import cookie from "js-cookie";
+import Qs from "qs";
+import { message } from "antd";
+import { TOKEN, CONFIG_SERVER, routes } from "../constants/config";
+
+const request = axios.create();
+
+request.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error.response || { data: {} });
+  }
+);
+
+request.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    const { data, status } = error?.response || {};
+
+    if (status === 403) {
+      message.error(data?.status?.message || "Truy cập không hợp lệ!");
+      if (data?.status?.code === "LMS-40011") {
+        setTimeout(() => {
+          window.location.href = routes.LOGIN;
+        }, 1000);
+      }
+    } else if (status === 401) {
+      cookie.remove(TOKEN);
+      message.error(
+        "Phiên làm việc của bạn đã hết hạn. Vui lòng đăng nhập lại!"
+      );
+      setTimeout(() => {
+        window.location.href = routes.LOGIN;
+      }, 1000);
+    } else {
+      message.error(data?.status?.message || "Lỗi hệ thống!");
+    }
+    return Promise.reject(error?.response || { data: {} });
+  }
+);
+
+const api = (options) => {
+  let config = {
+    baseURL: CONFIG_SERVER.BASE_URL,
+    ...options,
+    paramsSerializer: (params) =>
+      Qs.stringify(params, { arrayFormat: "repeat" }),
+    headers: {
+      ...options.headers,
+    },
+  };
+  if (cookie.get(TOKEN)) {
+    config.headers.Authorization = `${cookie.get(TOKEN)}`;
+  }
+  return request(config);
+};
+
+export default api;

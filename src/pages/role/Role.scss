@@ -1,0 +1,27 @@
+.role-page {
+  display: flex;
+  width: 100%;
+  .role-content {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .pagination-table {
+    margin-top: 8px;
+    text-align: right;
+    padding: 0 8px;
+  }
+}
+
+.add-edit-role-modal {
+  .add-edit-role-content {
+    .permission-item {
+      .ant-select-selector {
+        max-height: 200px;
+        overflow: auto;
+      }
+    }
+  }
+}

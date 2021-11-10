@@ -1,0 +1,44 @@
+.student-detail-page {
+    display: flex;
+    width: 100%;
+    .student-detail-content {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+  
+      .page-title {
+        .back-to-student {
+          color: #00000073;
+          transition: color 0.3s;
+          &:hover {
+            color: #01a2a6;
+            cursor: pointer;
+          }
+        }
+      }
+  
+      .tab-student-detail {
+        .ant-tabs-nav {
+          padding: 0 16px;
+        }
+      }
+    }
+  }
+  
+  .student-info {
+    padding: 0 16px;
+    .input-link {
+      .ant-input-group-addon {
+        padding: 0;
+      }
+      .btn-view-detail {
+        height: 100%;
+        width: 100%;
+        font-size: inherit;
+        margin: 0;
+        padding: 0 12px;
+      }
+    }
+  }
+  

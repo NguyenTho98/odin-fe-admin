@@ -1,0 +1,25 @@
+.revenue-detail-content{
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    .back-to-revenue {
+        color: #00000073;
+        transition: color 0.3s;
+        &:hover {
+        color: #01a2a6;
+        cursor: pointer;
+        }
+    }
+    .add-edit-revenue-content{
+        padding: 0 16px;
+    }
+    .footer-revenue{
+        justify-content: flex-end;
+        display: flex;
+        margin-right: 16px;
+        .btn-add-new{
+            margin-left: 10px;
+        }
+    }
+}

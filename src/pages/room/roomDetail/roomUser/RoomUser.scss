@@ -1,0 +1,29 @@
+.room-user-page {
+  display: flex;
+  width: 100%;
+  .room-user-content {
+    width: 100%;
+  }
+
+  .table-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 0 16px;
+    .selected-info {
+      display: inline;
+      white-space: nowrap;
+      .select-items {
+        color: #01a2a6;
+      }
+    }
+    .btn-action {
+      min-width: 90px;
+
+      &.btn-add-new {
+        margin-left: 16px;
+      }
+    }
+  }
+}

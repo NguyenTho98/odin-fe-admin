@@ -1,0 +1,28 @@
+@import "../../../variables.scss";
+.left-menu-container {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  min-height: 100vh;
+  background: $sider-bg-color;
+
+  .app-logo {
+    height: $header-height;
+    line-height: $header-height;
+    cursor: pointer;
+    border-bottom: 1px solid #4b545c;
+    overflow: hidden;
+    padding: 0 20px;
+    .img-logo {
+      height: 36px;
+      max-width: 185px;
+    }
+  }
+
+  .menu-list {
+    background: $sider-bg-color;
+    overflow: auto;
+    height: calc(100vh - #{$header-height});
+    .ant-menu-sub {
+      background: transparent;
+    }
+  }
+}

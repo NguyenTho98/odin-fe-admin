@@ -1,0 +1,38 @@
+.header-action-content {
+  padding: 0 16px;
+  margin-bottom: 12px;
+  justify-content: space-between;
+
+  .filter-data {
+    flex: 1;
+    .filter-group {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .filter-title {
+        font-size: 14px;
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      .search-box {
+        display: flex;
+        max-width: 486px;
+        .search-input {
+          .ant-input-affix-wrapper {
+            min-height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-actions {
+    .btn-item {
+      margin-right: 12px;
+    }
+  }
+}
+
+.dropdown-search-type {
+  min-width: 120px !important;
+}

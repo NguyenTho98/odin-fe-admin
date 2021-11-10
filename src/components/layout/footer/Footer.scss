@@ -1,0 +1,9 @@
+@import "../../../variables.scss";
+
+.footer-container {
+  height: $footer-height;
+  background: #151515;
+  .footer-wrapper {
+    color: #fff;
+  }
+}

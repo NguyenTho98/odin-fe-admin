@@ -1,0 +1,27 @@
+.asset-page {
+    display: flex;
+    width: 100%;
+    .asset-content {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+    }
+  
+    .pagination-table {
+      margin-top: 8px;
+      text-align: right;
+      padding: 0 8px;
+    }
+  }
+  
+  .add-edit-asset-modal {
+    .add-edit-asset-content {
+      .upload-asset-item {
+        .ant-input-group-addon {
+          padding: 0;
+        }
+      }
+    }
+  }
+  

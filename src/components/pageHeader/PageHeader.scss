@@ -1,0 +1,20 @@
+.page-header-container {
+  padding: 16px 16px;
+  margin-bottom: 8px;
+  .page-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    .back-to-page {
+      color: #00000073;
+      transition: color 0.3s;
+      &:hover {
+        color: #01a2a6;
+        cursor: pointer;
+      }
+    }
+  }
+  .divider-line {
+    margin: 5px 0 0;
+  }
+}

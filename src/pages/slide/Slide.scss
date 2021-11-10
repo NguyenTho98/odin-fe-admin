@@ -1,0 +1,22 @@
+.slide-page {
+  .table-content {
+    padding: 0 !important;
+
+    .ant-table {
+      margin: 0 !important;
+    }
+
+    .table-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      .table-title {
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .btn-add-slide {
+        margin-left: auto;
+      }
+    }
+  }
+}

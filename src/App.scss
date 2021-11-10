@@ -1,0 +1,122 @@
+@import "variables.scss";
+
+.app-container {
+  height: 100vh;
+  overflow: hidden;
+  .content-container {
+    height: $common-page-height;
+    padding: 8px 8px 16px;
+    overflow: auto;
+  }
+
+  .common-page {
+    padding-bottom: 16px;
+    background: #fff;
+    border-radius: 8px;
+    min-height: 100%;
+    .table-content {
+      padding: 0 16px;
+      .ant-table {
+        border: 1px solid #f0f0f0;
+        border-radius: 2px;
+        overflow: hidden;
+
+        .cell-status {
+          min-width: 65px;
+          margin: 0;
+          border-radius: 16px;
+        }
+        .cell-description {
+          min-width: 280px;
+        }
+      }
+    }
+  }
+
+  .text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  // max 3 dòng sẽ biến đôi thành ...
+  .text-ellipsis-line-clamp-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: inherit;
+  }
+  // max 2 dòng sẽ biến đôi thành ...
+  .text-ellipsis-line-clamp-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: inherit;
+  }
+}
+
+.ant-modal-wrap {
+  .ant-modal-content {
+    border-radius: 5px;
+    .ant-modal-close {
+      color: #fff;
+    }
+    .ant-modal-header {
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 4px 4px 0 0;
+      .ant-modal-title {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.common-form-modal {
+  max-height: 95vh;
+
+  .ant-modal-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(95vh - 130px);
+
+    // css for form item
+    .ant-form-item {
+      .ant-form-item-label {
+        line-height: normal;
+        padding-bottom: 4px;
+        label {
+          color: #818e9b;
+          font-size: 12px;
+          font-weight: 500;
+          height: unset;
+        }
+      }
+
+      .ant-form-item-control {
+        .ant-form-item-explain {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .ant-modal-footer {
+    padding: 20px;
+    border: none;
+    .ant-btn {
+      min-width: 96px;
+      border-radius: 4px;
+      box-shadow: 0px 4px 10px #00798024;
+    }
+    .btn-cancel {
+      margin-right: 8px;
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}

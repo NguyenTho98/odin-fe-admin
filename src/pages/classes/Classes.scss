@@ -1,0 +1,27 @@
+.classes-page {
+    display: flex;
+    width: 100%;
+    .classes-content {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+    }
+  
+    .pagination-table {
+      margin-top: 8px;
+      text-align: right;
+      padding: 0 8px;
+    }
+  }
+  
+  .add-edit-classes-modal {
+    .add-edit-classes-content {
+      .upload-classes-item {
+        .ant-input-group-addon {
+          padding: 0;
+        }
+      }
+    }
+  }
+  

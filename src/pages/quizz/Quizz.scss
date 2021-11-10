@@ -1,0 +1,54 @@
+@import "../../variables.scss";
+
+.quizz-page {
+  display: flex;
+  width: 100%;
+  .quizz-content {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .pagination-table {
+    margin-top: 8px;
+    text-align: right;
+    padding: 0 8px;
+  }
+}
+
+.add-quizz-modal {
+  .add-quizz-content {
+    .question-content {
+      .qs-title {
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .qs-number {
+        font-weight: 500;
+        margin-bottom: 6px;
+        .delete-qs-icon {
+          color: $font-red-color;
+          margin-left: 8px;
+          cursor: pointer;
+          padding: 5px;
+          &:hover {
+            border-radius: 50%;
+            background: rgba(1, 162, 166, 0.2);
+          }
+        }
+      }
+
+      .question-list {
+        .question-item {
+          margin-bottom: 18px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
