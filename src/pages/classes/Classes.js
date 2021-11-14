@@ -34,7 +34,7 @@ const Classes = (props) => {
   }, []);
 
   useEffect(() => {
-    if (!isEmpty(profile)) {
+    if (isEmpty(profile)) {
       handleFetchClasses(params);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -83,8 +83,8 @@ const Classes = (props) => {
     },
     {
       title: "Lịch học",
-      dataIndex: "day_in_week",
-      key: "day_in_week",
+      dataIndex: "schedule",
+      key: "schedule",
       sorter: true,
     },
     {
@@ -100,15 +100,27 @@ const Classes = (props) => {
       sorter: true,
     },
     {
-      title: "classes_order_no",
-      dataIndex: "classes_order_no",
-      key: "classes_order_no",
+      title: "Số buổi học",
+      dataIndex: "available",
+      key: "available",
       sorter: true,
     },
     {
-      title: "Lớp chờ",
-      dataIndex: "waiting_flag",
-      key: "waiting_flag",
+      title: "Số học viên",
+      dataIndex: "capacity",
+      key: "capacity",
+      sorter: true,
+    },
+    {
+      title: "Giảng viên",
+      dataIndex: "teachers",
+      key: "teachers",
+      sorter: true,
+    },
+    {
+      title: "Thời gian",
+      dataIndex: "time",
+      key: "time",
       sorter: true,
     },
     {
@@ -124,45 +136,45 @@ const Classes = (props) => {
       sorter: true,
     },
     {
-        title: "Thời gian khởi tạo",
-        dataIndex: "created_at",
-        key: "created_at",
-        sorter: true,
-      },
-      {
-        title: "Thời gian cập nhật",
-        dataIndex: "updated_at",
-        key: "updated_at",
-        sorter: true,
-      },
-    // {
-    //   title: "Trạng thái",
-    //   dataIndex: "status",
-    //   key: "status",
-    //   align: "classes",
-    //   width: "150px",
-    //   sorter: true,
-    //   filterMultiple: false,
-    //   filteredValue: filteredStatus,
-    //   filters: [
-    //     {
-    //       text: "Active",
-    //       value: CLASSES_STATUS.ACTIVE,
-    //     },
-    //     {
-    //       text: "Draff",
-    //       value: CLASSES_STATUS.DRAFF,
-    //     },
-    //   ],
-    //   render: (status) => (
-    //     <Tag
-    //       color={status === CLASSES_STATUS.ACTIVE ? "success" : "warning"}
-    //       className="cell-status"
-    //     >
-    //       {status || ""}
-    //     </Tag>
-    //   ),
-    // },
+      title: "Phòng học",
+      dataIndex: "classroom",
+      key: "classroom",
+      sorter: true,
+    },
+    {
+      title: "Trạng thái lớp học",
+      dataIndex: "status_classes",
+      key: "status_classes",
+      sorter: true,
+    },
+    {
+      title: "Trạng thái",
+      dataIndex: "status",
+      key: "status",
+      align: "classes",
+      width: "150px",
+      sorter: true,
+      // filterMultiple: false,
+      // filteredValue: filteredStatus,
+      // filters: [
+      //   {
+      //     text: "Active",
+      //     value: CLASSES_STATUS.ACTIVE,
+      //   },
+      //   {
+      //     text: "Draff",
+      //     value: CLASSES_STATUS.DRAFF,
+      //   },
+      // ],
+      // render: (status) => (
+      //   <Tag
+      //     color={status === CLASSES_STATUS.ACTIVE ? "success" : "warning"}
+      //     className="cell-status"
+      //   >
+      //     {status || ""}
+      //   </Tag>
+      // ),
+    },
   ];
 
   if (

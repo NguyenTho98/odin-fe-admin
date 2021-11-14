@@ -13,7 +13,7 @@ import {
   actionAddClassRoom,
   actionEditClassRoom,
 } from "./ClassRoomAction";
-import { getClassesList } from "../classes/ClassesAction";
+import { getCenterList } from "../center/CenterAction";
 // import { CLASSROOM_STATUS } from "../../utils/constants/config";
 let timeoutSearchUser;
 
@@ -22,13 +22,13 @@ export default function AddOrEditClassRoomModal(props) {
   const isAddNew = isEmpty(item);
   const [form] = Form.useForm();
   const [processing, setProcessing] = useState(false);
-  const [classesData, setClassesData] = useState([]);
+  const [centerData, setCenterData] = useState([]);
   useEffect(() => {
     return () => {
       clearTimeout(timeoutSearchUser);
     };
   }, []);
-  const handleFetchClassesData = async (field, value) => {
+  const handleFetchCenterData = async (field, value) => {
     try {
       let rqParams = { page: 0, size: 50, query: "" };
       if (field && value) {
@@ -37,20 +37,20 @@ export default function AddOrEditClassRoomModal(props) {
           : `${field}==${value}`;
       }
 
-      const { data } = await getClassesList(rqParams);
-      setClassesData(data?.results || []);
+      const { data } = await getCenterList(rqParams);
+      setCenterData(data?.results || []);
     } catch (error) {}
   };
   useEffect(() => {
-    if (item?.classes) {
-        handleFetchClassesData("id", item?.classes);
+    if (item?.center) {
+        handleFetchCenterData("id", item?.center);
     } else {
-        handleFetchClassesData();
+        handleFetchCenterData();
     }
   }, [item]);
-  const onChangeClasses = (value) => {
-    const userTmp = classesData.find((item) => item.id === value);
-    form.setFieldsValue({ classes: userTmp?.id || "" });
+  const onChangeCenter = (value) => {
+    const userTmp = centerData.find((item) => item.id === value);
+    form.setFieldsValue({ center: userTmp?.id || "" });
   };
 
   const handleOk = () => {
@@ -117,7 +117,7 @@ export default function AddOrEditClassRoomModal(props) {
             
             <Form.Item
               name="classes"
-              label="Lớp học"
+              label="Trung tâm"
             //   rules={[
             //     {
             //       required: true,
@@ -127,14 +127,14 @@ export default function AddOrEditClassRoomModal(props) {
             >
               <Select
                 showSearch
-                placeholder="Tìm kiếm lớp học"
+                placeholder="Tìm kiếm trung tâm"
                 filterOption={false}
                 defaultActiveFirstOption={true}
-                onChange={onChangeClasses}
+                onChange={onChangeCenter}
               >
-                {classesData.map((it) => (
+                {centerData.map((it) => (
                   <Select.Option key={it.id} value={it.id}>
-                    {it?.id || ""}
+                    {it?.name || ""}
                   </Select.Option>
                 ))}
               </Select>

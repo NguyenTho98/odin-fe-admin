@@ -34,7 +34,7 @@ const Center = (props) => {
   }, []);
 
   useEffect(() => {
-    if (!isEmpty(profile)) {
+    if (isEmpty(profile)) {
       handleFetchCenter(params);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

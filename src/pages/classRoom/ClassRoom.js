@@ -34,7 +34,7 @@ const ClassRoom = (props) => {
   }, []);
 
   useEffect(() => {
-    if (!isEmpty(profile)) {
+    if (isEmpty(profile)) {
       handleFetchClassRoom(params);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -93,30 +93,14 @@ const ClassRoom = (props) => {
       key: "size",
       sorter: true,
     },
+    
     {
-      title: "Thời gian kết thúc",
-      dataIndex: "end_date",
-      key: "end_date",
+      title: "Trung tâm",
+      dataIndex: "center",
+      key: "center",
       sorter: true,
     },
-    {
-      title: "Lớp học",
-      dataIndex: "classes",
-      key: "classes",
-      sorter: true,
-    },
-    {
-        title: "Thời gian khởi tạo",
-        dataIndex: "created_at",
-        key: "created_at",
-        sorter: true,
-      },
-      {
-        title: "Thời gian cập nhật",
-        dataIndex: "updated_at",
-        key: "updated_at",
-        sorter: true,
-      },
+  
     // {
     //   title: "Trạng thái",
     //   dataIndex: "status",

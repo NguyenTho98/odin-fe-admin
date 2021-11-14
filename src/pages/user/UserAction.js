@@ -21,7 +21,7 @@ export const actionGetUsers =
 export const getUserList = (params = {}) => {
   return api({
     method: "get",
-    url: `/admin/user/search`,
+    url: `/users`,
     params,
   });
 };
